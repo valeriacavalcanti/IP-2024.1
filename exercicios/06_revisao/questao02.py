@@ -1,18 +1,11 @@
 maior_par = None
 
-# LER PRIMEIRO VALOR PAR
-num = int(input('Número: '))
-while (num != 0 and num % 2 == 1):
-    num = int(input('Número: '))
+num = int(input('Digite um número: '))
+while (num != 0):
+    if (num % 2 == 0) and ((maior_par == None) or (num > maior_par)):
+        maior_par = num
 
-if (num != 0) and (num % 2 == 0):
-    # LER DEMAIS VALORES
-    maior_par = num
-    num = int(input('Número: '))
-    while (num != 0):
-        if (num % 2 == 0) and (num > maior_par):
-            maior_par = num
-        num = int(input('Número: '))
+    num = int(input('Digite um número: '))
 
 if (maior_par == None):
     print('Nenhum valor par digitado')

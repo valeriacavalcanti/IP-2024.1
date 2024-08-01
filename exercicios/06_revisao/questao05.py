@@ -1,11 +1,16 @@
 dia, mes, ano = input('Data: ').split('/')
+
+# Converter para o formato: yyyymmdd
 maior = int(f'{ano}{mes:02}{dia:02}')
+
 maior_dia = dia
 maior_mes = mes
 maior_ano = ano
 
 for i in range(2):
     dia, mes, ano = input('Data: ').split('/')
+
+    # Converter para o formato: yyyymmdd
     tempo = int(f'{ano}{mes:02}{dia:02}')
 
     if (tempo > maior):
